@@ -1,0 +1,114 @@
+:root {
+  --primary: #009688;
+  --secondary: #004D40;
+  --background: #ffffff;
+  --text: #333;
+}
+
+body.dark {
+  --background: #121212;
+  --text: #e0e0e0;
+  --primary: #80cbc4;
+  --secondary: #00695c;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+header {
+  background: var(--primary);
+  padding: 1rem 2rem;
+  color: white;
+}
+.banner {
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+section {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.project-list li {
+  background: #e0f7fa;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: var(--secondary);
+}
+
+footer {
+  background: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+@media(max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
